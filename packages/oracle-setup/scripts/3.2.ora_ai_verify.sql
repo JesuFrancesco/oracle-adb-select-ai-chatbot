@@ -1,0 +1,1 @@
+select DBMS_CLOUD_AI.get_profile()
