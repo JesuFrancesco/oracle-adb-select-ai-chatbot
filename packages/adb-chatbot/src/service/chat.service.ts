@@ -6,9 +6,6 @@ export const askChatbot = async (prompt: string) => {
     body: JSON.stringify({
       prompt,
     }),
-    headers: {
-      "Content-Type": "application/json",
-    },
   });
 
   if (res.status !== 200) {

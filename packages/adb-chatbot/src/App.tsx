@@ -17,32 +17,41 @@ function App() {
   }, [messages]);
 
   const handleSubmit = async () => {
-    if (!prompt.trim()) return;
-
-    const userMessage: IMessage = {
-      id: crypto.randomUUID(),
-      content: prompt,
-      sender: "user",
-      timestamp: new Date(),
-    };
-
-    setPrompt("");
-
-    const botMessage: IMessage = {
+    let botMessage: IMessage = {
       id: crypto.randomUUID(),
       content: "...",
       sender: "bot",
       timestamp: new Date(),
     };
 
-    setMessages((prev) => [...prev, userMessage, botMessage]);
+    try {
 
-    const { response } = await askChatbot(prompt);
+      if (!prompt.trim()) return;
 
-    replaceLastMessage({
-      ...botMessage,
-      content: response,
-    });
+      const userMessage: IMessage = {
+        id: crypto.randomUUID(),
+        content: prompt,
+        sender: "user",
+        timestamp: new Date(),
+      };
+
+      setPrompt("");
+
+      setMessages((prev) => [...prev, userMessage, botMessage]);
+
+      const { response } = await askChatbot(prompt);
+
+      replaceLastMessage({
+        ...botMessage,
+        content: response,
+      });
+    } catch (error) {
+      replaceLastMessage({
+        ...botMessage,
+        content: "Lo siento, no pude procesar tu solicitud. Inténtalo más tarde.",
+      });
+
+    }
   };
 
   return (
@@ -56,16 +65,14 @@ function App() {
         {messages.map((message) => (
           <div
             key={message.id}
-            className={`flex font-semibold ${
-              message.sender === "user" ? "justify-end" : "justify-start"
-            }`}
+            className={`flex font-semibold ${message.sender === "user" ? "justify-end" : "justify-start"
+              }`}
           >
             <div
-              className={`max-w-[70%] p-2 rounded-2xl ${
-                message.sender === "user"
-                  ? "bg-blue-500 text-white self-end"
-                  : "bg-gray-200 text-black self-start"
-              }`}
+              className={`max-w-[70%] p-2 rounded-2xl ${message.sender === "user"
+                ? "bg-blue-500 text-white self-end"
+                : "bg-gray-200 text-black self-start"
+                }`}
             >
               <p className="text-sm">{message.content}</p>
             </div>
