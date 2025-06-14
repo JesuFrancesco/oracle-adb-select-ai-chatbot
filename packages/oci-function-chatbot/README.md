@@ -12,6 +12,8 @@ Para poder levantar un servicio de function es necesario el uso de:
 - Fn CLI SDK
 - Crear un repositorio de contenedores en Oracle Container Registry
 - Crear una vcn + subred pública con Internet Gateway
+- Crear una policy de acceso a fn-invocation
+- Crear una API Gateway o Load Balancer que permita llamar a la función
 
 Luego de ello se puede crear un Application dentro de OCI Functions (sea de arquitectura GENERIC_X86_ARM o equivalente)
 y seguir las indicaciones de configuración para el CLI de Fn
