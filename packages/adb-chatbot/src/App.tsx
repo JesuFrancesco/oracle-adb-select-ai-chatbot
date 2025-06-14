@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <main className="flex flex-col justify-center gap-4 p-4">
+    <main className="flex flex-col h-screen justify-center gap-4 p-4">
       <h1 className="text-3xl font-bold text-center">Chat BANCOLIMA</h1>
 
       <div
@@ -73,7 +73,7 @@ function App() {
         ))}
       </div>
 
-      <div className="w-full flex flex-row items-center gap-4 mt-4">
+      <div className="w-full flex flex-row h-fit items-center gap-4 mt-4">
         <textarea
           id="greet-input"
           className="w-full p-2 border border-gray-300 rounded"
