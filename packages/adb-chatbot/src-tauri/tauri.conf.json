@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "adb-chatbot",
-  "version": "0.1.0",
+  "productName": "Chatbot BANCOLIMA",
+  "version": "1.0.0",
   "identifier": "jesufrancesco.adb-chatbot.app",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "adb-chatbot",
+        "title": "Chatbot BANCOLIMA",
         "width": 800,
         "height": 600
       }
