@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import Markdown from "react-markdown";
 import { IMessage } from "./interface/IMessage";
 import { useMessage } from "./hooks/use-message";
 import { askChatbot } from "./service/chat.service";
@@ -25,7 +26,6 @@ function App() {
     };
 
     try {
-
       if (!prompt.trim()) return;
 
       const userMessage: IMessage = {
@@ -48,9 +48,9 @@ function App() {
     } catch (error) {
       replaceLastMessage({
         ...botMessage,
-        content: "Lo siento, no pude procesar tu solicitud. Inténtalo más tarde.",
+        content:
+          "Lo siento, no pude procesar tu solicitud. Inténtalo más tarde.",
       });
-
     }
   };
 
@@ -65,16 +65,18 @@ function App() {
         {messages.map((message) => (
           <div
             key={message.id}
-            className={`flex font-semibold ${message.sender === "user" ? "justify-end" : "justify-start"
-              }`}
+            className={`flex ${
+              message.sender === "user" ? "justify-end" : "justify-start"
+            }`}
           >
             <div
-              className={`max-w-[70%] p-2 rounded-2xl ${message.sender === "user"
-                ? "bg-blue-500 text-white self-end"
-                : "bg-gray-200 text-black self-start"
-                }`}
+              className={`max-w-[70%] p-2 rounded-2xl ${
+                message.sender === "user"
+                  ? "bg-blue-500 text-white self-end"
+                  : "bg-gray-200 text-black self-start"
+              }`}
             >
-              <p className="text-sm">{message.content}</p>
+              <Markdown>{message.content}</Markdown>
             </div>
           </div>
         ))}
