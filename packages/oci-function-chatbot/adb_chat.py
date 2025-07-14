@@ -32,6 +32,9 @@ def ask_database(prompt: str, mode: str) -> str:
             sql = "SELECT AI %s '%s'".format(mode, safe_prompt)
             cursor.execute(sql)
 
+            response = ""
+            metadata = []
+
             if mode != "SQL":
                 lob = cursor.fetchone()[0]
                 response = lob.read() if lob is not None else ""
