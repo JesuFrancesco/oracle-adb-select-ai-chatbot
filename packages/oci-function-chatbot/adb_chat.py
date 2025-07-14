@@ -3,11 +3,11 @@ from database import get_oracle_connection
 from log import database_logger
 
 
-def ask_database(prompt: str) -> str:
+def ask_database(prompt: str, mode: str) -> str:
     """
     Prompts database and returns a response.
     """
-    database_logger.info("Conectando a la base de datos Oracle ADB para AI NARRATE...")
+    database_logger.info("Conectando a la base de datos")
     pool = get_oracle_connection()
 
     with pool.acquire() as connection:
@@ -26,16 +26,25 @@ def ask_database(prompt: str) -> str:
 
             database_logger.info("Ejecutando AI NARRATE...")
 
-            # cursor.execute("SELECT AI NARRATE :prompt;", {"prompt": prompt})
+            # cursor.execute("SELECT AI NARRATE :prompt;", {"prompt": prompt}) # not supported with Select AI
 
             safe_prompt = prompt.replace("'", "''")
-            sql = f"SELECT AI NARRATE '{safe_prompt}' FROM DUAL"
+            sql = "SELECT AI %s '%s'".format(mode, safe_prompt)
             cursor.execute(sql)
 
-            lob = cursor.fetchone()[0]
-            result = lob.read() if lob is not None else ""
+            if mode != "SQL":
+                lob = cursor.fetchone()[0]
+                response = lob.read() if lob is not None else ""
+            else:
+                columns = [desc[0] for desc in cursor.description]
+                rows = cursor.fetchall()
+                def read_lob(val):
+                    return val.read() if hasattr(val, "read") else val
+                metadata = [tuple(read_lob(col) for col in row) for row in rows]
+                metadata = [columns, *metadata]
 
             database_logger.info("AI NARRATE completado, resultado obtenido.")
-            database_logger.info("Resultado: %s", result)
+            database_logger.info("Resultado: %s", response)
+            database_logger.info("Metadata: %s", metadata)
 
-            return result
+            return response, metadata

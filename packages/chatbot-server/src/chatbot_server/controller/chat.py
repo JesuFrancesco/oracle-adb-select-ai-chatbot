@@ -27,7 +27,8 @@ async def get_chat(req: PromptBody):
         if not prompt:
             raise HTTPException(status_code=400, detail="Prompt cannot be empty")
 
-        return {"response": ask_database(prompt), "ok": True}
+        response, metadata = ask_database(prompt)
+        return {"response": response, "metadata": metadata, "ok": True}
 
     except Exception as e:
         chat_logger.error(f"exception_type={type(e)}")

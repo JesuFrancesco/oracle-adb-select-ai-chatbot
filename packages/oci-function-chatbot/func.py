@@ -12,6 +12,17 @@ def handler(ctx, data: io.BytesIO=None):
         body = json.loads(data.getvalue())
 
         prompt = body.get("prompt", None)
+        mode = body.get("mode", "narrate")
+
+        mode = mode.upper().replace(" ", "")
+
+        if mode not in ["NARRATE", "CHAT", "SQL", "SHOWSQL"]:
+            return response.Response(
+                ctx, response_data=json.dumps(
+                    {"response": "Invalid mode", "ok": False}),
+                headers={"Content-Type": "application/json"},
+                status_code=400
+            )
 
         if not prompt:
             return response.Response(
@@ -21,11 +32,12 @@ def handler(ctx, data: io.BytesIO=None):
                 status_code=400
             )
 
-        root_logger.info("Inside Python Hello World function")
+        root_logger.info("Calling ADB with prompt: %s and mode: %s", prompt, mode)
 
+        answer, metadata = ask_database(prompt, mode)
         return response.Response(
             ctx, response_data=json.dumps(
-                {"response": ask_database(prompt), "ok": True}),
+                {"response": answer, "metadata": metadata, "ok": True}),
             headers={"Content-Type": "application/json"}
         )
     except (Exception, ValueError) as ex:

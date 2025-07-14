@@ -3,7 +3,7 @@ from database import get_oracle_connection
 from log import database_logger
 
 
-def ask_database(prompt: str) -> str:
+def ask_database(prompt: str, mode: str = "NARRATE") -> str:
     """
     Prompts database and returns a response.
     """
@@ -29,13 +29,19 @@ def ask_database(prompt: str) -> str:
             # cursor.execute("SELECT AI NARRATE :prompt;", {"prompt": prompt})
 
             safe_prompt = prompt.replace("'", "''")
-            sql = f"SELECT AI NARRATE '{safe_prompt}' FROM DUAL"
+            sql = f"SELECT AI {mode} '{safe_prompt}'"
             cursor.execute(sql)
 
-            lob = cursor.fetchone()[0]
-            result = lob.read() if lob is not None else ""
+            columns = [desc[0] for desc in cursor.description]
+            rows = cursor.fetchall()
+            def read_lob(val):
+                return val.read() if hasattr(val, "read") else val
+
+            response = ""
+            metadata = [tuple(read_lob(col) for col in row) for row in rows]
 
             database_logger.info("AI NARRATE completado, resultado obtenido.")
-            database_logger.info("Resultado: %s", result)
+            database_logger.info("Resultado: %s", response)
+            database_logger.info("Metadata: %s", metadata)
 
-            return result
+            return response, [columns, *metadata]
