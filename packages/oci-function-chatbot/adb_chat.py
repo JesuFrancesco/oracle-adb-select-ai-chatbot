@@ -24,12 +24,14 @@ def ask_database(prompt: str, mode: str) -> str:
             )
             database_logger.info("Perfil de AI NARRATE configurado.")
 
-            database_logger.info("Ejecutando AI NARRATE...")
+            database_logger.info("Ejecutando SELECT AI:")
 
             # cursor.execute("SELECT AI NARRATE :prompt;", {"prompt": prompt}) # not supported with Select AI
 
             safe_prompt = prompt.replace("'", "''")
-            sql = "SELECT AI %s '%s'".format(mode, safe_prompt)
+            
+            database_logger.info("SELECT AI %s '%s'", mode, safe_prompt)
+            sql = f"SELECT AI {mode} '{safe_prompt}'"
             cursor.execute(sql)
 
             response = ""
@@ -37,7 +39,7 @@ def ask_database(prompt: str, mode: str) -> str:
 
             if mode != "SQL":
                 lob = cursor.fetchone()[0]
-                response = lob.read() if lob is not None else ""
+                response = lob.read() if lob is not None and hasattr(lob, "read") else lob
             else:
                 columns = [desc[0] for desc in cursor.description]
                 rows = cursor.fetchall()
