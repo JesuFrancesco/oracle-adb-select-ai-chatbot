@@ -49,17 +49,19 @@ export default function ChatbotPage() {
 
       setMessages((prev) => [...prev, userMessage, botMessage]);
 
-      const { response } = await askChatbot(prompt, mode);
+      const { response, metadata } = await askChatbot(prompt, mode);
 
       replaceLastMessage({
         ...botMessage,
         content: response,
+        metadata: metadata,
       });
     } catch (error) {
       replaceLastMessage({
         ...botMessage,
         content:
           "⚠️ Lo siento, no pude procesar tu solicitud. Inténtalo más tarde.",
+        metadata: [],
       });
     } finally {
       setIsLoading(false);
@@ -83,7 +85,11 @@ export default function ChatbotPage() {
         ref={scrollRef}
       >
         {messages.map((message) => (
-          <Message key={message.id} sender={message.sender}>
+          <Message
+            key={message.id}
+            sender={message.sender}
+            metadata={message.metadata ?? undefined}
+          >
             {message.content}
           </Message>
         ))}

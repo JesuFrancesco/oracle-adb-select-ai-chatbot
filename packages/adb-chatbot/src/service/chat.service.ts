@@ -13,6 +13,7 @@ export const askChatbot = async (prompt: string, mode: ModeEnum) => {
   if (res.status !== 200) {
     return {
       response: `Lo siento, no pude procesar tu solicitud. Por favor, intenta de nuevo.`,
+      metadata: [],
       ok: false,
     };
   }
@@ -21,6 +22,7 @@ export const askChatbot = async (prompt: string, mode: ModeEnum) => {
 
   return data as {
     response: string;
+    metadata: string[][] | [];
     ok: boolean;
   };
 };
