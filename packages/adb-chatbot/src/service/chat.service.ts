@@ -1,10 +1,12 @@
 import config from "../config";
+import { ModeEnum } from "../interface/ModeEnum";
 
-export const askChatbot = async (prompt: string) => {
+export const askChatbot = async (prompt: string, mode: ModeEnum) => {
   const res = await fetch(config.VITE_API_URL, {
     method: "POST",
     body: JSON.stringify({
       prompt,
+      mode,
     }),
   });
 
