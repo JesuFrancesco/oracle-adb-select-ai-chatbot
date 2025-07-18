@@ -1,0 +1,101 @@
+id,cliente_id,direccion,monto,tasa_interes,fecha_inicio,fecha_fin,estado
+90,66,"10588 Badger Street, Richmond, Virginia, United States, 23285",239167.31,16,2025-03-02,2024-07-19,closed
+73,90,"13380 Pompano Lane, Scranton, Pennsylvania, United States, 18505",271791.29,18,2024-12-09,2024-07-22,closed
+66,79,"1470 Astor Way, Oceanside, California, United States, 92056",189101.57,10,2025-06-13,2024-08-01,closed
+21,11,"14671 Loma Paseo Drive, Muskegon, Michigan, United States, 49444",306168.22,13,2024-09-25,2024-08-03,closed
+93,60,"287 Calabria Place, Los Angeles, California, United States, 90005",303585.72,8,2024-10-24,2024-08-12,pending
+26,85,"12289 Dipietro Lane, Dallas, Texas, United States, 75287",255774.95,4,2025-03-22,2024-08-15,closed
+79,51,"620 Nadira Court, Maple Plain, Minnesota, United States, 55579",304969.67,10,2025-02-27,2024-08-20,pending
+62,43,"5907 Conway Court, San Diego, California, United States, 92105",306617.08,10,2024-12-10,2024-08-28,rejected
+85,21,"14943 Parkyn Path, Fort Worth, Texas, United States, 76105",273423.16,17,2025-07-05,2024-08-28,rejected
+2,28,"1098 Kramer Court, San Francisco, California, United States, 94147",292907.37,11,2024-11-18,2024-09-05,closed
+14,86,"14046 Fayette Court, San Francisco, California, United States, 94137",211968.89,13,2025-04-20,2024-09-08,closed
+71,27,"380 Reyes Avenue, El Paso, Texas, United States, 88514",288918.41,3,2024-09-11,2024-09-08,active
+76,48,"11212 Bayberry Court, New Orleans, Louisiana, United States, 70165",191369.02,15,2025-06-11,2024-09-18,approved
+42,29,"8395 Broaderick Court, Seattle, Washington, United States, 98115",255156.46,16,2024-10-21,2024-09-19,closed
+56,14,"4321 Indigo Avenue, Newport Beach, California, United States, 92662",258207.22,13,2025-01-17,2024-09-26,rejected
+55,57,"5601 Poplar Terrace, Jacksonville, Florida, United States, 32230",261314.31,2,2025-03-04,2024-09-30,pending
+46,81,"9038 Timmonsville Way, Fresno, California, United States, 93750",257648.01,1,2024-09-08,2024-10-01,rejected
+41,96,"7743 Coleman Drive, Louisville, Kentucky, United States, 40220",237554.00,14,2025-04-03,2024-10-03,approved
+10,92,"14542 Mcconnells Avenue, Oklahoma City, Oklahoma, United States, 73152",222348.24,2,2024-10-30,2024-10-15,active
+22,15,"6650 Sadie Avenue, Pensacola, Florida, United States, 32595",233361.75,20,2024-09-02,2024-10-16,pending
+9,50,"9162 Lone Palm Avenue, Memphis, Tennessee, United States, 38119",300533.48,15,2025-03-16,2024-10-21,closed
+91,52,"13630 Martinez Drive, Minneapolis, Minnesota, United States, 55417",241495.17,2,2025-04-03,2024-10-21,closed
+92,65,"13728 Corona Court, Washington, District of Columbia, United States, 20456",227229.11,1,2024-08-05,2024-11-03,rejected
+44,17,"7733 Stacey Place, Peoria, Illinois, United States, 61605",192990.58,18,2025-03-14,2024-11-05,pending
+88,23,"1911 Ridgeland Path, Albany, Georgia, United States, 31704",244758.18,4,2024-07-27,2024-11-05,pending
+95,46,"3969 Corona Avenue, Syracuse, New York, United States, 13224",267114.72,17,2025-07-08,2024-11-10,approved
+20,72,"11436 Trundle Terrace, Kansas City, Kansas, United States, 66160",306702.33,18,2024-12-09,2024-11-18,rejected
+32,63,"6384 Burgess Drive, Charleston, West Virginia, United States, 25305",252012.74,6,2024-12-10,2024-11-18,pending
+54,39,"14228 Evelynton Loop, Montgomery, Alabama, United States, 36104",294500.56,13,2025-04-01,2024-11-18,closed
+37,68,"14066 Rockville Place, Billings, Montana, United States, 59112",306411.52,3,2025-04-27,2024-11-28,active
+31,24,"7037 Malachite Terrace, Pasadena, California, United States, 91117",250566.28,7,2025-03-01,2024-11-29,rejected
+72,20,"5560 Broaderick Court, Greensboro, North Carolina, United States, 27415",237902.10,18,2024-11-23,2024-12-02,approved
+7,38,"2244 Fraser Court, Lexington, Kentucky, United States, 40591",245323.90,17,2025-06-16,2024-12-03,rejected
+47,76,"4038 Swicord Street, Fort Lauderdale, Florida, United States, 33325",216523.60,20,2025-01-21,2024-12-04,active
+63,91,"10377 Francisco Street, Sioux Falls, South Dakota, United States, 57188",291028.15,8,2025-02-18,2024-12-06,pending
+84,69,"6712 Palermo Place, Houston, Texas, United States, 77212",209330.16,6,2024-10-01,2024-12-11,pending
+25,99,"1563 Pacolet Terrace, Montgomery, Alabama, United States, 36177",203978.56,8,2024-11-28,2024-12-17,active
+1,45,"14910 Zapata Place, Tacoma, Washington, United States, 98481",289794.71,3,2024-11-15,2024-12-24,approved
+33,47,"5198 Hubbs Street, Watertown, Massachusetts, United States, 02472",280133.85,9,2025-03-15,2024-12-26,active
+50,84,"9109 Gary Lane, Virginia Beach, Virginia, United States, 23471",197610.48,8,2025-05-12,2025-01-01,pending
+99,33,"11799 Santa Rosa Court, Stockton, California, United States, 95205",310398.36,7,2024-12-17,2025-01-15,closed
+40,2,"5429 Medina Avenue, San Diego, California, United States, 92121",274264.37,12,2024-10-21,2025-01-16,approved
+74,56,"1445 Walnut Way, Atlanta, Georgia, United States, 30328",233043.50,11,2024-12-21,2025-01-16,rejected
+53,95,"1140 Pelion Place, Miami, Florida, United States, 33147",210357.92,12,2025-05-20,2025-01-18,active
+24,1,"6421 Wisteria Street, Lexington, Kentucky, United States, 40510",278125.03,4,2024-10-31,2025-01-27,approved
+77,19,"12985 Isle Of Palms Path, Lancaster, California, United States, 93584",225807.31,12,2024-09-28,2025-01-29,closed
+69,94,"9464 Dagenais Way, Austin, Texas, United States, 78732",247240.86,10,2025-04-22,2025-02-06,rejected
+87,22,"11724 Cruz Court, Cleveland, Ohio, United States, 44185",224971.96,6,2025-06-10,2025-02-11,rejected
+52,10,"6161 Blackberry Avenue, Birmingham, Alabama, United States, 35225",233942.88,16,2025-04-12,2025-02-12,approved
+29,18,"14295 Goodman Court, Washington, District of Columbia, United States, 20005",292349.68,15,2025-04-04,2025-02-14,pending
+39,35,"1207 Emiline Terrace, Valley Forge, Pennsylvania, United States, 19495",287590.05,14,2024-12-18,2025-02-16,rejected
+78,74,"7403 West Schwartz Blvd., Stockton, California, United States, 95210",280146.47,1,2025-04-06,2025-02-17,active
+82,6,"5575 Hammock Lane, Des Moines, Iowa, United States, 50369",226896.92,8,2025-05-20,2025-02-21,approved
+68,83,"5063 Nautilus Lane, Virginia Beach, Virginia, United States, 23459",225105.25,10,2025-03-29,2025-02-24,pending
+4,41,"13561 Vibrant Lane, Rochester, New York, United States, 14652",204609.97,14,2024-11-22,2025-02-26,rejected
+15,42,"3140 Moncayo Avenue, Fargo, North Dakota, United States, 58122",304480.32,14,2024-10-12,2025-02-26,rejected
+97,8,"7265 Cochran Street, Baltimore, Maryland, United States, 21275",277369.96,16,2025-06-23,2025-02-28,active
+67,70,"319 Eugene Terrace, Silver Spring, Maryland, United States, 20918",211697.54,10,2025-06-24,2025-03-04,active
+49,9,"3932 Merida Circle, San Francisco, California, United States, 94159",207560.90,10,2025-07-14,2025-03-09,closed
+94,58,"9302 Lake Ridge Drive, Odessa, Texas, United States, 79764",242280.64,15,2024-11-19,2025-03-13,active
+30,75,"3518 Errol Terrace, Grand Forks, North Dakota, United States, 58207",225596.90,5,2025-04-17,2025-03-15,approved
+61,40,"6668 Colerain Circle, Modesto, California, United States, 95397",287878.63,6,2025-06-19,2025-03-17,closed
+28,32,"9901 Broome Court, Harrisburg, Pennsylvania, United States, 17105",305636.83,5,2024-10-22,2025-03-22,rejected
+13,7,"6591 Shelburne Lane, Charleston, West Virginia, United States, 25326",253457.34,9,2025-02-03,2025-03-23,approved
+8,88,"10263 St. George Avenue, White Plains, New York, United States, 10633",305029.68,13,2025-04-03,2025-03-24,approved
+6,13,"30 Bladewood Court, San Bernardino, California, United States, 92405",202059.28,2,2024-11-07,2025-03-25,pending
+96,55,"8387 Alexandria Place, Washington, District of Columbia, United States, 20442",282249.96,18,2024-10-23,2025-03-26,pending
+59,16,"12466 Hallmark Path, Baton Rouge, Louisiana, United States, 70883",283573.30,14,2024-11-07,2025-03-27,closed
+98,3,"9773 Duffy Loop, Joliet, Illinois, United States, 60435",195771.80,13,2025-07-16,2025-03-30,approved
+64,34,"4849 Auburn Avenue, Columbus, Ohio, United States, 43268",301521.15,4,2025-06-23,2025-03-31,active
+70,89,"8409 Jim Street, Des Moines, Iowa, United States, 50315",233089.59,8,2024-12-11,2025-04-01,approved
+3,87,"10310 Mcsweeney Avenue, Beaverton, Oregon, United States, 97075",301891.59,3,2025-04-27,2025-04-04,pending
+18,4,"11766 Goldberger Lane, Spokane, Washington, United States, 99205",258572.37,17,2024-09-23,2025-04-08,closed
+83,5,"14058 Tenerife Lane, South Bend, Indiana, United States, 46634",204522.63,13,2024-12-01,2025-04-09,closed
+19,30,"12115 Rogers Road, Chesapeake, Virginia, United States, 23324",229125.58,2,2025-06-22,2025-04-13,active
+16,31,"11726 Bethlehem Lane, Honolulu, Hawaii, United States, 96805",229236.95,12,2024-08-19,2025-04-17,pending
+80,44,"13347 Stricklin Street, Tacoma, Washington, United States, 98411",212763.42,6,2024-09-18,2025-04-24,rejected
+43,59,"1248 Rhapsody Path, Cleveland, Ohio, United States, 44111",287000.85,6,2025-02-15,2025-04-25,active
+45,54,"10734 Auburndale Avenue, Buffalo, New York, United States, 14276",231237.33,9,2024-09-10,2025-04-28,rejected
+51,82,"9027 Barret Lane, Erie, Pennsylvania, United States, 16510",234164.66,11,2025-04-24,2025-05-05,rejected
+27,98,"13552 Mosby Terrace, Huntsville, Alabama, United States, 35895",199095.93,5,2025-05-22,2025-05-07,active
+23,71,"14 Vintage Place, Midland, Texas, United States, 79710",231797.59,15,2025-03-29,2025-05-11,rejected
+36,77,"13561 Cross Hill Drive, Chico, California, United States, 95973",310923.60,19,2024-11-30,2025-05-13,closed
+60,37,"13537 Kaufman Circle, Fresno, California, United States, 93762",224247.61,9,2025-07-06,2025-05-14,pending
+86,73,"6893 Imperial Lane, Alexandria, Louisiana, United States, 71307",289524.76,10,2025-02-03,2025-05-14,active
+35,12,"1930 Kimble Court, Brooksville, Florida, United States, 34605",251627.84,6,2024-08-08,2025-05-15,closed
+57,61,"3883 Eduardo Place, North Little Rock, Arkansas, United States, 72199",281858.96,8,2024-10-13,2025-05-17,active
+89,62,"662 Nobleton Lane, Saint Louis, Missouri, United States, 63104",266195.80,15,2025-05-24,2025-05-17,approved
+65,53,"14454 Corbett Drive, Hagerstown, Maryland, United States, 21747",195081.71,10,2025-01-04,2025-05-23,approved
+34,26,"11866 Sunset Ridge Drive, Nashville, Tennessee, United States, 37210",298034.13,17,2025-07-08,2025-05-26,approved
+5,97,"7741 Rose Lane, Dallas, Texas, United States, 75367",262303.85,8,2024-07-23,2025-05-29,active
+75,100,"1940 Hollywood Terrace, Newton, Massachusetts, United States, 02162",205538.38,2,2025-07-15,2025-05-29,pending
+81,67,"928 Carmen Rene Way, Albuquerque, New Mexico, United States, 87190",236473.39,18,2025-05-02,2025-05-29,active
+48,80,"7599 Kerry Place, Philadelphia, Pennsylvania, United States, 19120",241333.74,8,2024-08-23,2025-06-07,approved
+11,93,"1786 McKown Lane, Shawnee Mission, Kansas, United States, 66220",189706.36,16,2025-06-21,2025-06-13,pending
+58,64,"10305 Adelphi Avenue, Albany, New York, United States, 12227",219872.52,8,2025-05-21,2025-06-13,approved
+12,78,"4509 Gompers Place, El Paso, Texas, United States, 79940",250987.20,19,2025-03-17,2025-06-16,active
+38,49,"12826 Oyster Place, Mobile, Alabama, United States, 36628",236690.55,19,2024-11-10,2025-06-24,pending
+17,25,"5384 Kayla Court, Boston, Massachusetts, United States, 02114",278554.14,13,2024-11-03,2025-07-01,approved
+100,36,"11918 Fudge Terrace, Washington, District of Columbia, United States, 20319",310835.93,17,2024-09-19,2025-07-10,rejected
