@@ -16,7 +16,7 @@ def handler(ctx, data: io.BytesIO=None):
 
         mode = mode.upper().replace(" ", "")
 
-        if mode not in ["NARRATE", "CHAT", "SQL", "SHOWSQL"]:
+        if mode not in ["NARRATE", "CHAT", "SQL", "RUNSQL", "EXPLAINSQL", "SHOWSQL"]:
             return response.Response(
                 ctx, response_data=json.dumps(
                     {"response": "Invalid mode", "ok": False}),

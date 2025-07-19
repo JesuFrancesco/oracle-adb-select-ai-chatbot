@@ -1,5 +1,6 @@
 import React from "react";
 import xlsx from "json-as-xlsx";
+import xlsxLogo from "../assets/xlsx.png";
 
 /**
  * @param param0 An array of arrays where the first array contains the headers and subsequent arrays contain the data rows.
@@ -34,8 +35,18 @@ export const Table = ({ data }: { data: string[][] }) => {
     xlsx(data, settings);
   }
 
+  if (rows.length === 0) {
+    return (
+      <div
+        className={`max-w-[70%] p-2 rounded-2xl bg-gray-200 text-black self-start`}
+      >
+        No se encontraron datos que corresponden a la consulta.
+      </div>
+    );
+  }
+
   return (
-    <div className="max-w-[90%] bg-gray-200 text-black rounded-2xl p-4">
+    <div className="max-w-[90%] bg-gray-200 text-black rounded-2xl p-4 overflow-x-scroll">
       <table
         className="w-full border-collapse overflow-x-scroll"
         border={1}
@@ -53,7 +64,9 @@ export const Table = ({ data }: { data: string[][] }) => {
           {rows.map((row, idx) => (
             <tr key={idx}>
               {row.map((cell, cellIdx) => (
-                <td key={cellIdx}>{cell}</td>
+                <td key={cellIdx} className="p-2">
+                  {cell}
+                </td>
               ))}
             </tr>
           ))}
@@ -62,8 +75,12 @@ export const Table = ({ data }: { data: string[][] }) => {
 
       <hr className="my-4" />
 
-      <button onClick={handleExport} className="px-4 py-2 rounded">
-        Exportar a Excel
+      <button
+        onClick={handleExport}
+        className="rounded flex flex-row items-center gap-2"
+      >
+        <img src={xlsxLogo} alt="Exportar a Excel" className="h-8" />
+        <p className="font-semibold">Exportar a Excel</p>
       </button>
     </div>
   );

@@ -96,20 +96,57 @@ export default function ChatbotPage() {
       </section>
 
       {!userActed && (
-        <section className="flex flex-row gap-3 px-4 justify-center">
+        <section className="flex flex-row overflow-x-auto whitespace-nowrap gap-3 px-4 py-2 my-2">
           {[
-            "📄 Cuantos empleados tengo",
-            "💡 Cuantos empleados tengo de género masculino",
-            "📦 Cuantos empleados están en licencia",
+            ["💱", "Cuántos cambios de divisa han realizado los clientes"],
+            ["👤", "Qué tipos de cuentas tienen asociados los clientes"],
+            [
+              "🏦",
+              "Cuál es el saldo promedio de las cuentas bancarias de los clientes",
+            ],
+            [
+              "💰",
+              "Cuáles son los depósitos a plazo fijo más solicitados por los clientes",
+            ],
+            ["📜", "Qué fianzas activas tienen los clientes actualmente"],
+            [
+              "📈",
+              "Qué rentabilidad tienen los fondos de inversión más utilizados por los clientes",
+            ],
+            [
+              "🏠",
+              "Qué condiciones tienen las hipotecas contratadas por los clientes",
+            ],
+            ["🚗", "Qué contratos de leasing mantienen los clientes activos"],
+            [
+              "💸",
+              "Qué pagos de servicios realizan con mayor frecuencia los clientes",
+            ],
+            [
+              "📅",
+              "Cuáles son los planes de pensión más contratados por los clientes",
+            ],
+            [
+              "🏦",
+              "Qué préstamos personales están siendo solicitados por los clientes",
+            ],
+            [
+              "💳",
+              "Cuál es el promedio del límite de crédito otorgado a los clientes",
+            ],
+            [
+              "🔁",
+              "Qué volumen de transferencias han realizado los clientes en los últimos 30 días",
+            ],
           ].map((recommendation, index) => (
             <Badge
               className="cursor-pointer border-0 dark:bg-[#0f0f0f98] text-sm"
               onClick={() => {
-                setPrompt(recommendation.substring(3));
+                setPrompt(recommendation[1]);
               }}
               key={index}
             >
-              {recommendation}
+              {recommendation[0]} {recommendation[1]}
             </Badge>
           ))}
         </section>
