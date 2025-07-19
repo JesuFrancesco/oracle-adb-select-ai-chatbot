@@ -4,7 +4,7 @@
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![Tauri](https://img.shields.io/badge/tauri-%2324C8DB.svg?style=for-the-badge&logo=tauri&logoColor=%23FFFFFF)
 
-Implementacion de un chatbot (con Tauri y FastAPI) con una Oracle Database 23ai (OCI Autonomous Database)
+Implementacion de un chatbot (con Tauri y FastAPI) usando la feature de Select AI en Oracle Database 19c/23ai
 
 <p align="middle">
     <img src="./docs/preview_gif.gif" width="800px" />
@@ -23,12 +23,12 @@ El presente repositorio presenta la siguiente estructura.
 ```sh
 ├── README.md
 ├── docs
-│   └── ... # <= Archivos de documentación
+│   └── ... # <- Archivos de documentación
 └── packages
-    ├── adb-chatbot # <= Frontend
-    ├── chatbot-server # <= FastAPI Server
-    ├── oci-function-chatbot  # <= OCI Function Server
-    └── oracle-setup  # <= SQL Scripts to setup Select AI (DBMS_CLOUD & DBMS_CLOUD_AI)
+    ├── adb-chatbot # <- Tauri Frontend
+    ├── chatbot-server # <- FastAPI Server
+    ├── oci-function-chatbot  # <- OCI Function Server
+    └── oracle-setup  # <- SQL Scripts to setup Select AI (DBMS_CLOUD & DBMS_CLOUD_AI)
 ```
 
 ## Instrucciones
@@ -75,7 +75,7 @@ npm install
 npm run tauri dev
 ```
 
-3. Correr servidor
+3. Correr servidor (FastAPI)
 
 Iniciar el servidor que llamará a Autonomous Database
 
@@ -89,6 +89,6 @@ pip install -r requirements.txt # o si tienes Poetry: poetry install
 
 **Nota:**
 
-4. Setup de OCI Function
+4. Despliegue de OCI Function
 
-[WIP](./packages/oci-function-chatbot)
+[Resumen de despliegue de OCI Function](./packages/oci-function-chatbot/README.md)
