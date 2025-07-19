@@ -37,7 +37,9 @@ def handler(ctx, data: io.BytesIO=None):
         answer, metadata = ask_database(prompt, mode)
         return response.Response(
             ctx, response_data=json.dumps(
-                {"response": answer, "metadata": metadata, "ok": True}),
+                {"response": answer, "metadata": metadata, "ok": True},
+                default=str,
+            ),
             headers={"Content-Type": "application/json"}
         )
     except (Exception, ValueError) as ex:
