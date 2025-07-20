@@ -4,7 +4,7 @@
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![Tauri](https://img.shields.io/badge/tauri-%2324C8DB.svg?style=for-the-badge&logo=tauri&logoColor=%23FFFFFF)
 
-Implementacion de un chatbot (con Tauri y FastAPI) usando la feature de Select AI en Oracle Database 19c/23ai
+Implementacion de un chatbot (con Tauri y FastAPI) usando la feature de Select AI en Oracle Database 23ai
 
 <p align="middle">
     <img src="./docs/preview_gif.gif" width="800px" />
