@@ -1,7 +1,8 @@
 BEGIN
-    DBMS_CLOUD_AI.DROP_PROFILE(
-        profile_name => 'MI_OCIAI_PROFILE'
-    );
+    -- DBMS_CLOUD_AI.DROP_PROFILE(
+    --     profile_name => 'MI_OCIAI_PROFILE'
+    -- );
+    -- Nota: Cambiar por tablas reales de tu esquema en 'object_list'
     DBMS_CLOUD_AI.CREATE_PROFILE(
         profile_name => 'MI_OCIAI_PROFILE',
         attributes => '{
